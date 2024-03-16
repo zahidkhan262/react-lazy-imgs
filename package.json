@@ -1,0 +1,23 @@
+{
+  "name": "react-lazy-imgs",
+  "version": "1.0.0",
+  "description": "The package allows for the lazy loading of images, meaning that images are only loaded when they are needed.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npx rollup -c"
+  },
+  "keywords": [],
+  "author": "zahidkhan262",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "^18.2.66",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.13.0",
+    "tslib": "^2.6.2"
+  }
+}
