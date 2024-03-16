@@ -1,6 +1,6 @@
 {
   "name": "react-lazy-imgs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The package allows for the lazy loading of images, meaning that images are only loaded when they are needed.",
   "type": "module",
   "main": "dist/index.js",
