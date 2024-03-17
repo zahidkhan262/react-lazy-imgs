@@ -1,4 +1,5 @@
 ﻿# Welcome to react-lazy-imgs
+ https://www.npmjs.com/package/react-lazy-imgs
 
 The `LazyImage` component is a versatile and lightweight solution for lazy loading images in React applications, designed to optimize performance by loading images only when they enter the viewport. It supports both React.js and React TypeScript environments, offering seamless integration into your projects.
 
