@@ -9,17 +9,17 @@ type LazyImageProps = {
     alt?: string;
 }
 
-const LazyImage: FC<LazyImageProps> = ({ placeholder, src, className, width, height, alt }: any) => {
-    const [isLoading, setIsLoading] = useState<boolean>(false);
+const LazyImage: FC<LazyImageProps> = ({ placeholder, src, className, width, height, alt }) => {
+    const [isLoading, setIsLoading] = useState<boolean>(true);
     const [viewSrc, setViewSrc] = useState<string>('');
 
-    const imgRef = useRef<any>(null);
+    const imgRef = useRef<HTMLImageElement>(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
                 setViewSrc(src);
-                observer.unobserve(imgRef.current);
+                observer.unobserve(imgRef.current as any);
             }
         });
 
@@ -45,7 +45,7 @@ const LazyImage: FC<LazyImageProps> = ({ placeholder, src, className, width, hei
                 src={viewSrc}
                 width={width}
                 height={height}
-                className={className}
+                className={isLoading ? 'hidden' : className}
                 onLoad={() => setIsLoading(false)}
                 alt={alt}
             />
